@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import { useRouter } from 'next/navigation';
@@ -98,6 +99,7 @@ function index() {
               <div className="service-list-item-holder">
                 <div> 
                   <Image
+                  alt="image"
                     src={link.src}
                     style={{ width: 60, height: 60, borderRadius: "50%" }}
                   />

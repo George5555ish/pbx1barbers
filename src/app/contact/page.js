@@ -23,10 +23,7 @@ function page() {
       type: "text",
     },
   ];
-  gsap.registerPlugin(useGSAP);
-
-  const container = useRef();
-  const router = useRouter()
+  gsap.registerPlugin(useGSAP); 
   useEffect(() => {
     // gsap code here...
     gsap.set("nav", { y: -100 });

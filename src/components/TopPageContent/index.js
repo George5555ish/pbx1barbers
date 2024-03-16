@@ -2,7 +2,6 @@ import React, { useRef,useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import {useNavigationHook} from "../../hooks/useNavigationHook";
 import Picture1 from "../../../public/images/pb1xbarbers/123.webp";
 import Picture2 from "../../../public/images/pb1xbarbers/662.webp";
 import Picture3 from "../../../public/images/pb1xbarbers/1225.webp";
