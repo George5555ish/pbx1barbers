@@ -1,4 +1,4 @@
-import React, { useRef,useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -10,23 +10,23 @@ import Picture5 from "../../../public/images/pb1xbarbers/5222.webp";
 import Picture6 from "../../../public/images/pb1xbarbers/5595.webp";
 import Picture7 from "../../../public/images/pb1xbarbers/6652.webp";
 import Picture8 from "../../../public/images/pb1xbarbers/552198.webp";
-import HeaderComp from "../Header/index"
-import { useRouter } from 'next/navigation';
+import HeaderComp from "../Header/index";
+import { useRouter } from "next/navigation";
 function TopPageContent() {
   gsap.registerPlugin(useGSAP);
 
   const container = useRef();
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     // gsap code here...
     gsap.set("nav", { y: -100 });
     gsap.set(".letter-wrapper", { y: 300 });
     gsap.set(".item-copy-wrapper p", { y: 70 });
-    gsap.set("nav",  {opacity:  1})
-    gsap.set(".header-item-1",  {opacity:  1})
-    gsap.set(".header-item-2",  {opacity:  1})
-    gsap.set(".item-copy-wrapper",  {opacity:  1})
-    gsap.set(".letter",  {opacity:  1})
+    gsap.set("nav", { opacity: 1 });
+    gsap.set(".header-item-1", { opacity: 1 });
+    gsap.set(".header-item-2", { opacity: 1 });
+    gsap.set(".item-copy-wrapper", { opacity: 1 });
+    gsap.set(".letter", { opacity: 1 });
     gsap.defaults({ duration: 1, ease: "power3.out" });
     const tl = gsap.timeline({
       delay: 0.5,
@@ -46,7 +46,6 @@ function TopPageContent() {
         ".item-main .item-img img",
         {
           clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-       
         },
         "<"
       )
@@ -71,7 +70,7 @@ function TopPageContent() {
       )
       .to(
         ".item-side .item-img",
-        { 
+        {
           clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
           stagger: 0.1,
         },
@@ -91,31 +90,42 @@ function TopPageContent() {
           stagger: 0.05,
         },
         "<"
-      ).to("nav", { y: 0 }, "<").to(".lower-content",{
-        display:"block"
-      }).to(".lobster-class",{
+      )
+      .to("nav", { y: 0 }, "<")
+      .to(".lower-content", {
+        display: "block",
+      })
+      .to(".lobster-class", {
         y: 40,
-        opacity:  0,
-      }).to(".lobster-class",{
-        fontFamily:  "Lobster",  
-        y: 0,opacity: 1, color: "#f00e0e"
-      }).to(".header", {
-        boxShadow: "10px 10px 63px 0px rgba(224, 42, 18, 1)"
-      }, "<")
-      ;
+        opacity: 0,
+      })
+      .to(".lobster-class", {
+        fontFamily: "Lobster",
+        y: 0,
+        opacity: 1,
+        color: "#f00e0e",
+      })
+      .to(
+        ".header",
+        {
+          boxShadow: "10px 10px 63px 0px rgba(224, 42, 18, 1)",
+        },
+        "<"
+      );
   }, []); // <-- scope is for selector text (optional)
-  function useNavigationHook (routeToGo){ 
-router.push(routeToGo, { scroll: false }); 
-}
+  function useNavigationHook() {
+    router.push("/contact", { scroll: false });
+  }
   return (
     <div
-      style={{
-        //   justifyContent: "center",
-        // display: "flex",
-        // height: "100vh",
-      }}
+      style={
+        {
+          //   justifyContent: "center",
+          // display: "flex",
+          // height: "100vh",
+        }
+      }
     >
-    
       {/* <HeaderComp /> */}
       <div className="top_content_container">
         <div className="items">
@@ -123,10 +133,10 @@ router.push(routeToGo, { scroll: false });
             <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
-                  <p   style={{  }}>Clean Shave</p>
+                  <p style={{}}>Clean Shave</p>
                 </div>
                 <div className="item-copy-wrapper">
-                  <p style={{ }}>30 minutes</p>
+                  <p style={{}}>30 minutes</p>
                 </div>
               </div>
               <div className="item-img">
@@ -139,8 +149,7 @@ router.push(routeToGo, { scroll: false });
                   <p>Hair Colouring</p>
                 </div>
                 <div className="item-copy-wrapper">
-                <p style={{ }}>30 minutes</p>
-
+                  <p style={{}}>30 minutes</p>
                 </div>
               </div>
               <div className="item-img">
@@ -153,8 +162,7 @@ router.push(routeToGo, { scroll: false });
                   <p>Fade cut</p>
                 </div>
                 <div className="item-copy-wrapper">
-                <p style={{ }}>30 minutes</p>
-
+                  <p style={{}}>30 minutes</p>
                 </div>
               </div>
               <div className="item-img">
@@ -163,14 +171,13 @@ router.push(routeToGo, { scroll: false });
             </div>
           </div>
           <div className="items-col">
-            <div className="item item-main"> 
+            <div className="item item-main">
               <div className="item-copy">
-                <div className="item-copy-wrapper" onClick={() => useNavigationHook("/contact")}>
+                <div className="item-copy-wrapper" onClick={useNavigationHook}>
                   <p>Book an Appointment</p>
                 </div>
                 <div className="item-copy-wrapper">
-                {/* <p style={{ }}>30 minutes</p> */}
-           
+                  {/* <p style={{ }}>30 minutes</p> */}
                 </div>
               </div>
               <div className="item-img">
@@ -179,14 +186,13 @@ router.push(routeToGo, { scroll: false });
             </div>
           </div>
           <div className="items-col lower-item-col">
-            <div className="item item-side"> 
+            <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
                   <p>Buzz Cut</p>
                 </div>
                 <div className="item-copy-wrapper">
-                <p style={{ }}>30 minutes</p>
-
+                  <p style={{}}>30 minutes</p>
                 </div>
               </div>
               <div className="item-img">
@@ -199,22 +205,20 @@ router.push(routeToGo, { scroll: false });
                   <p>Hot towel Shave</p>
                 </div>
                 <div className="item-copy-wrapper">
-                <p style={{ }}>30 minutes</p>
-
+                  <p style={{}}>30 minutes</p>
                 </div>
               </div>
               <div className="item-img">
                 <Image src={Picture7} alt="image" />
               </div>
             </div>
-            <div className="item item-side"> 
+            <div className="item item-side">
               <div className="item-copy">
                 <div className="item-copy-wrapper">
                   <p>Hair shape-up</p>
                 </div>
                 <div className="item-copy-wrapper">
-                <p style={{ }}>30 minutes</p>
-
+                  <p style={{}}>30 minutes</p>
                 </div>
               </div>
               <div className="item-img">

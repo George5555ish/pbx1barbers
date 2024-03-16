@@ -61,7 +61,7 @@ function HeaderComp() {
         <div className={showBar ? "menu-bar animate":"menu-bar"}>
           <div className="menu-logo">
             <Link href="/">
-                <Image src={logo} width={120} />
+                <Image src={logo} width={120} alt="image" />
             </Link>
           </div>
           <div className="phoneNumber">
@@ -75,7 +75,7 @@ function HeaderComp() {
           <div className="menu-overlay-bar">
           <div className="menu-logo">
             <Link href="/">
-            <Image src={logo} width={120} />
+            <Image src={logo} width={120} alt="image" />
             </Link>
           </div>
           <div className="menu-open" onClick={toggleMenu}>

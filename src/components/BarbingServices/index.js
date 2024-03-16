@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import bookmark from "../../../public/images/pb1xbarbers/bookmark.svg";
 import Picture from "../../../public/images/pb1xbarbers/123.webp";
 import "./services.css";
-function index() {
+function BarbingServices() {
   const useNavigationHook = (routeToGo) => {
     router.push(routeToGo, { scroll: false }); 
   };
@@ -131,4 +131,4 @@ function index() {
   );
 }
 
-export default index;
+export default BarbingServices;

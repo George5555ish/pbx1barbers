@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRouter } from 'next/navigation';
 import Footer from "../../components/Footer"
-function page() {
+function Page() {
   const formList = [
     { name: "Name", id: "name", placeholder: "Name", type: "input" },
     {
@@ -124,4 +124,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
