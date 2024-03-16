@@ -6,7 +6,7 @@ import bookmark from "../../../public/images/pb1xbarbers/bookmark.svg";
 import Picture from "../../../public/images/pb1xbarbers/123.webp";
 import "./services.css";
 function BarbingServices() {
-  const useNavigationHook = (routeToGo) => {
+  const navigateToPage = (routeToGo) => {
     router.push(routeToGo, { scroll: false }); 
   };
   const router = useRouter()
@@ -104,12 +104,13 @@ function BarbingServices() {
                     style={{ width: 60, height: 60, borderRadius: "50%" }}
                   />
                 </div>
-                <div className="service-list-text" onClick={useNavigationHook}>
+                <div className="service-list-text" onClick={navigateToPage}>
                   <p>{link.title}</p>
                   <p>{link.description}</p>
                 </div>
                 <div>
                 <Image
+                alt="image"
                     src={bookmark}
                     style={{ width: 60, height: 60, borderRadius: "50%" }}
                   />
@@ -121,7 +122,7 @@ function BarbingServices() {
         })}
       </div>
 
-   <div className="cta-button-container" onClick={() => useNavigationHook('/contact')}>
+   <div className="cta-button-container" onClick={() => navigateToPage('/contact')}>
    <button className="cta-button">
         Book An Appointment
       </button>
