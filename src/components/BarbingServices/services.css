@@ -1,0 +1,102 @@
+.services-parent {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 2em 0;
+  /* height: 120vh;
+     */
+}
+.services-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 75vw;
+}
+.services-container h1 {
+  display: flex;
+  justify-content: center;
+}
+.services-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  padding: 2em;
+}
+.service-link-item {
+  border: 1px solid var(--primary-clr);
+  padding: 1em;
+}
+.service-link-item-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.service-link-item-holder img {
+  height: 40px;
+  width: 50px;
+}
+.services-list {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5em 0.5em;
+  grid-auto-flow: row;
+}
+@media screen and (max-width: 968px) {
+  .services-list,
+  .services-controls {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 868px) {
+  .services-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.service-list-item-holder {
+  display: flex;
+  border: 1px solid #aaa;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-content: space-between;
+  padding: 1em 5px;
+}
+
+.service-list-text {
+  text-align: left;
+  padding-left: 0.5em;
+}
+
+.service-list-text p:nth-child(1) {
+  color: var(--primary-clr);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cta-button-container {
+  /* border: 1px solid green; */
+}
+.cta-button {
+  font-size: 1.7em;
+  cursor: pointer;
+  background-color: rgb(240, 14, 14, 1);
+  color: #fff;
+  text-align: center;
+  /* max-width: 150px; */
+  padding: 0.5em;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  -webkit-box-shadow: 10px 10px 63px 0px rgba(224, 42, 18, 1);
+  -moz-box-shadow: 10px 10px 63px 0px rgba(224, 42, 18, 1);
+  box-shadow: 10px 10px 63px 0px rgba(224, 42, 18, 1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

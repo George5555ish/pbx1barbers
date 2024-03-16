@@ -1,0 +1,26 @@
+{
+  "name": "pb1xbarbers-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.0",
+    "@studio-freight/lenis": "^1.0.33",
+    "framer-motion": "^10.18.0",
+    "gsap": "^3.12.5",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-feather": "^2.0.10",
+    "sass": "^1.69.7"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
+  }
+}

@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  color: #fff; 
+}
+
+:root{
+  --primary-clr: rgb(240, 14, 14, 0.73)
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(5, 5, 5);
+    overflow-x: hidden;
+}
+html {
+    font-family: var(--font-inter);
+  }
+  .lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+    
+  h1 {
+    font-family:  'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 42px;
+    /* text-align: center; */
+  }
+p {
+  
+  font-family: "Truculenta", sans-serif;
+  font-size: 18px;
+}
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13.5px;
+    font-weight: 500;
+
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    z-index: 999;
+  }
+
+  nav .logo a {
+    font-weight: bold;
+  }
+
+  nav > div {
+    flex: 1;
+  }
+
+  nav .nav-items {
+    display: flex;
+    gap:1em;
+    justify-content: flex-end;
+  }
+
+  nav .contact {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .top_content_container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  padding: 0 2em; 
+}
+
+.items-col {
+  flex: 1;
+  display: flex;
+}
+
+.item {
+  position: relative;
+  top:  10vh;
+  height: 300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: .75em; 
+}
+
+.item-copy {
+  /* padding: 0.5em; */
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-copy-wrapper {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.item-copy-wrapper:nth-child(1) p{
+  position: relative;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 100%;
+  color: var(--primary-clr);
+}
+.item-copy-wrapper:nth-child(2) p{
+  position: relative;
+  margin-bottom: 0.25em;
+  font-weight: 200; 
+  font-size: .9em;
+  line-height: 100%;
+}
+.item-side .item-img {
+  flex: 1;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0);
+}
+
+.items-col:nth-child(2){
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.item-main {
+  position: relative;
+  top: 12vh;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;;
+  text-align: center;
+
+}
+@media screen and (max-width: 1050px) {
+  .items { 
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.item{
+  padding: 0.25em;
+}
+.lower-item-col{
+  display: none;
+}
+.item-main{
+  height: 250px;
+top:  -5vh;
+}
+.item-main .item-img img { 
+height: 200px;
+ }
+ .items{
+  justify-content: space-around; 
+ }
+}
+.item-main .item-copy-wrapper   {
+display: flex;
+justify-content: center;
+align-items: center; 
+}
+.item-main .item-copy-wrapper p {
+  font-size: 1.7em;
+  cursor: pointer;
+  background-color: var(--primary-clr);
+  color:#fff;
+  text-align: center;
+  /* max-width: 150px; */
+  padding: .5em;
+  border-radius: 10px;  
+}
+.item-main .item-img { 
+  overflow: hidden;;
+}
+
+.item-main .item-img img { 
+ transform: scale(0.75);
+ clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+ margin-top: .5em;
+}
+
+.header {
+  position: absolute;
+  bottom: 40%;
+  transform-origin: center center;
+  width: 100%;
+  display: flex; 
+  /* -webkit-box-shadow: 10px 10px 63px 0px rgba(224, 42, 18, 1);
+  -moz-box-shadow: 10px 10px 63px 0px rgba(224, 42, 18, 1);
+  box-shadow: 10px 10px 63px 0px rgba(224, 42, 18, 1); */
+}
+
+.header-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.25);
+  padding: 0 1.2em;
+}
+
+.header-item-1 {
+  left:  18vw; 
+}
+
+.header-item-2{
+  right: 18vw;
+} 
+.letter{ 
+  flex: 1;
+  font-size: 11vw;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ 
+.lower-content{
+  display: none;
+}
+
+nav, .header-item-1, .header-item-2, .letter,.item-copy-wrapper{
+  opacity: 0; 
+  /* opacity changed by gsap */
+}
